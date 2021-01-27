@@ -2,7 +2,6 @@ package com.clinicals.api.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -16,7 +15,7 @@ import com.clinicals.api.repo.ClinicalsDataRepository;
 import com.clinicals.api.repo.PatientRepository;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:8080")
+@CrossOrigin( origins = "*" )
 public class ClinicalDatacontroller {
 
 	@Autowired
