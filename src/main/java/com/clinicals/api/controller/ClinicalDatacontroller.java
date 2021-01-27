@@ -27,7 +27,7 @@ public class ClinicalDatacontroller {
 
 	@RequestMapping(value = "/createclinicaldata" , method = RequestMethod.POST , consumes = "application/json", produces = "application/json")
 	public ClinicalData createClinicalsData(@RequestBody ClinicalDataRequest clinicalDataRequest) {
-		Patient patient = patientRepository.findById(clinicalDataRequest.getPatientId()).get();
+ 		Patient patient = patientRepository.findById(clinicalDataRequest.getPatientId()).get();
 		ClinicalData clinicalData = new ClinicalData();
 		clinicalData.setPatient(patient);
 		clinicalData.setComponentName(clinicalDataRequest.getComponentName());
